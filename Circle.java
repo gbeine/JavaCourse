@@ -1,4 +1,6 @@
 
+import teaching.WhiteBoard;
+
 /**
  * A Circle.
  */
@@ -29,5 +31,10 @@ public class Circle
     public void move(int x, int y)
     {
         this.center.move(x, y);
+    }
+    
+    public void draw(WhiteBoard wb)
+    {
+        this.wb.drawEllipse(center.getX(), center.getY(), radius, radius);
     }
 }
