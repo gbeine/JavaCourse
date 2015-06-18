@@ -15,5 +15,13 @@ public class Figure
     public void add(Form f)
     {
         forms.add(f);
-    }    
+    }
+    
+    public void move(int dx, int dy)
+    {
+        for(Form f : forms) {
+            f.move(dx, dy);
+        }
+    }
+
 }
