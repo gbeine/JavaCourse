@@ -44,7 +44,9 @@ public class Circle
     
     public void remove()
     {
-        this.wb.wipeShape(shape);
-        this.shape = null;
+        if (this.wb != null) {
+            this.wb.wipeShape(shape);
+            this.shape = null;
+        }
     }
 }
