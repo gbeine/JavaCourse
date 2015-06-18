@@ -4,13 +4,10 @@ import teaching.WhiteBoard;
 /**
  * A simple Line.
  */
-public class Line
+public class Line extends Drawable
 {
     private Point p1;
     private Point p2;
-    
-    private WhiteBoard wb;
-    private Object shape;
     
     /**
      * Constructor for creating Line objects.

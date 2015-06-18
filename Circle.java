@@ -4,13 +4,10 @@ import teaching.WhiteBoard;
 /**
  * A Circle.
  */
-public class Circle
+public class Circle extends Drawable
 {
     private int radius;
     private Point center;
-
-    private WhiteBoard wb;
-    private Object shape;
 
     /**
      * Constructor for Circle objects.
