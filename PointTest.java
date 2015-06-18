@@ -19,4 +19,12 @@ public class PointTest
         assertEquals(0, p.getX());
         assertEquals(0, p.getY());
     }
+
+    @Test
+    public void createWithParameters()
+    {
+        Point p = new Point(1, 5);
+        assertEquals(1, p.getX());
+        assertEquals(5, p.getY());
+    }
 }
