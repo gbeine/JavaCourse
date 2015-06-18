@@ -38,6 +38,9 @@ public class Circle
     
     public void draw(WhiteBoard wb)
     {
+        if (this.wb != null) {
+            remove();
+        }
         this.wb = wb;
         this.shape = this.wb.drawEllipse(center.getX(), center.getY(), radius, radius);
     }

@@ -47,6 +47,9 @@ public class Line
     
     public void draw(WhiteBoard wb)
     {
+        if (this.wb != null) {
+            remove();
+        }
         this.wb = wb;
         this.shape = wb.drawLine(p1.getX(), p1.getY(), p2.getX(), p2.getY());
     }
