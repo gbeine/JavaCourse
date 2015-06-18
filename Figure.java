@@ -23,5 +23,18 @@ public class Figure
             f.move(dx, dy);
         }
     }
-
+    
+    public void draw(teaching.WhiteBoard wb)
+    {
+        for(Form f : forms) {
+            f.draw(wb);
+        }
+    }
+    
+    public void remove()
+    {
+        for(Form f : forms) {
+            f.remove();
+        }
+    }
 }
