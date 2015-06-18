@@ -42,6 +42,12 @@ public class Line extends Drawable implements Form
         this.p2.move(x, y);
     }
     
+    public void rotate(Point center, double alpha)
+    {
+        this.p1.rotate(center, alpha);
+        this.p2.rotate(center, alpha);
+    }
+
     protected void drawForm()
     {
         this.shape = wb.drawLine(p1.getX(), p1.getY(), p2.getX(), p2.getY());

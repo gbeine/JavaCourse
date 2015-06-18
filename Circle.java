@@ -33,6 +33,11 @@ public class Circle extends Drawable implements Form
         this.center.move(x, y);
     }
     
+    public void rotate(Point center, double alpha)
+    {
+        this.center.rotate(center, alpha);
+    }
+
     protected void drawForm()
     {
         this.shape = this.wb.drawEllipse(center.getX(), center.getY(), radius, radius);

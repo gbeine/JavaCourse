@@ -24,6 +24,13 @@ public class Figure
         }
     }
     
+    public void rotate(Point center, double alpha)
+    {
+        for(Form f : forms) {
+            f.rotate(center, alpha);
+        }
+    }
+    
     public void draw(teaching.WhiteBoard wb)
     {
         for(Form f : forms) {
