@@ -33,20 +33,8 @@ public class Circle extends Drawable
         this.center.move(x, y);
     }
     
-    public void draw(WhiteBoard wb)
+    protected void drawForm()
     {
-        if (this.wb != null) {
-            remove();
-        }
-        this.wb = wb;
         this.shape = this.wb.drawEllipse(center.getX(), center.getY(), radius, radius);
-    }
-    
-    public void remove()
-    {
-        if (this.wb != null) {
-            this.wb.wipeShape(shape);
-            this.shape = null;
-        }
     }
 }

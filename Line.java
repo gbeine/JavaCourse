@@ -42,20 +42,8 @@ public class Line extends Drawable
         this.p2.move(x, y);
     }
     
-    public void draw(WhiteBoard wb)
+    protected void drawForm()
     {
-        if (this.wb != null) {
-            remove();
-        }
-        this.wb = wb;
         this.shape = wb.drawLine(p1.getX(), p1.getY(), p2.getX(), p2.getY());
-    }
-    
-    public void remove()
-    {
-        if (this.wb != null) {
-            this.wb.wipeShape(shape);
-            this.shape = null;
-        }
     }
 }
