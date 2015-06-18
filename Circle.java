@@ -9,6 +9,9 @@ public class Circle
     private int radius;
     private Point center;
 
+    private WhiteBoard wb;
+    private Object shape;
+
     /**
      * Constructor for Circle objects.
      */
@@ -35,6 +38,13 @@ public class Circle
     
     public void draw(WhiteBoard wb)
     {
-        this.wb.drawEllipse(center.getX(), center.getY(), radius, radius);
+        this.wb = wb;
+        this.shape = this.wb.drawEllipse(center.getX(), center.getY(), radius, radius);
+    }
+    
+    public void remove()
+    {
+        this.wb.wipeShape(shape);
+        this.shape = null;
     }
 }

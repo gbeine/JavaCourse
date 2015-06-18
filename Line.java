@@ -9,6 +9,9 @@ public class Line
     private Point p1;
     private Point p2;
     
+    private WhiteBoard wb;
+    private Object shape;
+    
     /**
      * Constructor for creating Line objects.
      */
@@ -44,6 +47,13 @@ public class Line
     
     public void draw(WhiteBoard wb)
     {
-        wb.drawLine(p1.getX(), p1.getY(), p2.getX(), p2.getY());
+        this.wb = wb;
+        this.shape = wb.drawLine(p1.getX(), p1.getY(), p2.getX(), p2.getY());
+    }
+    
+    public void remove()
+    {
+        this.wb.wipeShape(shape);
+        this.shape = null;
     }
 }
