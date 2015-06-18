@@ -33,4 +33,10 @@ public class Line
             return this.p2.getY();
         }
     }
+    
+    public void move(int x, int y)
+    {
+        this.p1.move(x, y);
+        this.p2.move(x, y);
+    }
 }
