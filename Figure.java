@@ -5,14 +5,14 @@ import java.util.HashSet;
 public class Figure
 {
 
-    private Set forms;
+    private Set<Form> forms;
     
     public Figure()
     {
-        forms = new HashSet();
+        forms = new HashSet<Form>();
     }
     
-    public void add(Object f)
+    public void add(Form f)
     {
         forms.add(f);
     }    

@@ -4,7 +4,7 @@ import teaching.WhiteBoard;
 /**
  * A simple Line.
  */
-public class Line extends Drawable
+public class Line extends Drawable implements Form
 {
     private Point p1;
     private Point p2;

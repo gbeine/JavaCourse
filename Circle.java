@@ -4,7 +4,7 @@ import teaching.WhiteBoard;
 /**
  * A Circle.
  */
-public class Circle extends Drawable
+public class Circle extends Drawable implements Form
 {
     private int radius;
     private Point center;
