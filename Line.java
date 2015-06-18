@@ -1,4 +1,6 @@
 
+import teaching.WhiteBoard;
+
 /**
  * A simple Line.
  */
@@ -38,5 +40,10 @@ public class Line
     {
         this.p1.move(x, y);
         this.p2.move(x, y);
+    }
+    
+    public void draw(WhiteBoard wb)
+    {
+        wb.drawLine(p1.getX(), p1.getY(), p2.getX(), p2.getY());
     }
 }
