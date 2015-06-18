@@ -36,4 +36,14 @@ public class PointTest
         assertEquals(3, p.getX());
         assertEquals(3, p.getY());
     }
+
+    @Test
+    public void ratate()
+    {
+        Point p = new Point(100,0);
+        Point c = new Point();
+        p.rotate(c, 90);
+        assertEquals(0, p.getX());
+        assertEquals(100, p.getY());
+    }
 }
