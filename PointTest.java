@@ -27,4 +27,13 @@ public class PointTest
         assertEquals(1, p.getX());
         assertEquals(5, p.getY());
     }
+
+    @Test
+    public void move()
+    {
+        Point p = new Point(1,1);
+        p.move(2,2);
+        assertEquals(3, p.getX());
+        assertEquals(3, p.getY());
+    }
 }
