@@ -27,5 +27,12 @@ public class Clock
         }
 
         clock.draw(wb);
+
+        Line pointer = new Line(center, new Point(300, 370));
+        pointer.draw(wb);
+
+        for (int i = 0; i < 20; i++) {
+        	pointer.rotate(center, -6);
+        }
     }
 }
