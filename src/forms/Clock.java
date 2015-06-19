@@ -31,7 +31,13 @@ public class Clock
         Line pointer = new Line(center, new Point(300, 370));
         pointer.draw(wb);
 
+        Line pointer2 = new Line(center, new Point(300, 320));
+        pointer2.draw(wb);
+
         Animation a = new Animation(pointer);
         a.animate(center);
-    }
+
+        Animation a2 = new Animation(pointer2);
+        a2.animate(center);
+}
 }
