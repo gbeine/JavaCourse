@@ -1,21 +1,27 @@
 package forms;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Animation {
 
 	private Form form;
-	private Command command;
+	private int frames;
 
-	public Animation(Form f) {
+	private List<Command> commands = new ArrayList<Command>();
+
+	public Animation(Form f, int frames) {
 		this.form = f;
+		this.frames = frames;
 	}
 
-	public void setCommand(Command c) {
-		this.command = c;
+	public void addCommand(Command c) {
+		this.commands.add(c);
 	}
 
 	public void animate() {
-		for (int i = 0; i < 20; i++) {
-			command.animate();
+		for (int i = 0; i < frames; i++) {
+			this.commands.get(i).animate();
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException ex) {
