@@ -34,15 +34,11 @@ public class Clock {
 
 		Animation a = new Animation(pointer, 20);
 		Rotate r = a.new Rotate(center, -6);
-		for (int i = 0; i < 20; i++) {
-			a.addCommand(r);
-		}
+		a.addCommand(r, 0);
 
 		Animation a2 = new Animation(pointer2, 20);
 		Rotate r2 = a2.new Rotate(center, -1);
-		for (int i = 0; i < 20; i++) {
-			a2.addCommand(r2);
-		}
+		a2.addCommand(r2, 0);
 
 		new ThreadedAnimation(a).start();
 		new ThreadedAnimation(a2).start();

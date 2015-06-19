@@ -1,27 +1,31 @@
 package forms;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Animation {
 
 	private Form form;
 	private int frames;
 
-	private List<Command> commands = new ArrayList<Command>();
+	private Map<Integer, Command> commands = new HashMap<Integer, Command>();
+	private Command currentCommand;
 
 	public Animation(Form f, int frames) {
 		this.form = f;
 		this.frames = frames;
 	}
 
-	public void addCommand(Command c) {
-		this.commands.add(c);
+	public void addCommand(Command c, int frame) {
+		this.commands.put(frame, c);
 	}
 
 	public void animate() {
 		for (int i = 0; i < frames; i++) {
-			this.commands.get(i).animate();
+			if (this.commands.containsKey(i)) {
+				this.currentCommand = this.commands.get(i);
+			}
+			this.currentCommand.animate();
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException ex) {
