@@ -9,7 +9,7 @@ public class Animation {
 	private int frames;
 
 	private Map<Integer, Command> commands = new HashMap<Integer, Command>();
-	private Command currentCommand = new DoNothing();
+	private Command currentCommand = DoNothing.INSTANCE;
 
 	public Animation(Form f, int frames) {
 		this.form = f;
