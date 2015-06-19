@@ -16,8 +16,8 @@ public class CircleTest
         Point center = new Point(1, 2);
         Circle c = new Circle(center, 3);
         assertEquals(3, c.getRadius());
-        assertEquals(1, c.getCenter().getX());
-        assertEquals(2, c.getCenter().getY());
+        assertEquals(1, c.getCenter().getX(), 0.0000001);
+        assertEquals(2, c.getCenter().getY(), 0.0000001);
     }
 
     @Test
@@ -26,7 +26,7 @@ public class CircleTest
         Point center = new Point(4, 2);
         Circle c = new Circle(center, 2);
         c.move(2, 2);
-        assertEquals(6, c.getCenter().getX());
-        assertEquals(4, c.getCenter().getY());
+        assertEquals(6, c.getCenter().getX(), 0.0000001);
+        assertEquals(4, c.getCenter().getY(), 0.0000001);
     }
 }

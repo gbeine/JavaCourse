@@ -1,8 +1,6 @@
 package forms;
 
 
-import teaching.WhiteBoard;
-
 /**
  * A Circle.
  */
@@ -32,12 +30,12 @@ public class Circle extends Drawable implements Form
 
     public void move(int x, int y)
     {
-        this.center.move(x, y);
+    	this.center = this.center.move(x, y);
     }
 
     public void rotate(Point center, double alpha)
     {
-        this.center.rotate(center, alpha);
+    	this.center = this.center.rotate(center, alpha);
     }
 
     protected void drawForm()
