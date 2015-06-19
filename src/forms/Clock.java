@@ -34,11 +34,11 @@ public class Clock {
 
 		Animation a = new Animation(pointer);
 		Rotate r = a.new Rotate(center, -6);
-		a.setAnimation(r);
+		a.setCommand(r);
 
 		Animation a2 = new Animation(pointer2);
 		Rotate r2 = a2.new Rotate(center, -1);
-		a2.setAnimation(r2);
+		a2.setCommand(r2);
 
 		new ThreadedAnimation(a).start();
 		new ThreadedAnimation(a2).start();
