@@ -31,17 +31,6 @@ public class Clock
         Line pointer = new Line(center, new Point(300, 370));
         pointer.draw(wb);
 
-        animate(center, pointer);
+        Animation.animate(center, pointer);
     }
-
-	private static void animate(Point center, Line pointer) {
-		for (int i = 0; i < 20; i++) {
-        	pointer.rotate(center, -6);
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException ex) {
-            	System.err.println(ex.getStackTrace());
-            }
-        }
-	}
 }
