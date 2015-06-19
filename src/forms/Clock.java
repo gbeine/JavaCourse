@@ -35,6 +35,8 @@ public class Clock {
 		Animation a = new Animation(pointer, 20);
 		Rotate r = a.new Rotate(center, -6);
 		a.addCommand(r, 0);
+		a.addCommand(new DoNothing(), 6);
+		a.addCommand(r, 12);
 
 		Animation a2 = new Animation(pointer2, 20);
 		Rotate r2 = a2.new Rotate(center, -1);
