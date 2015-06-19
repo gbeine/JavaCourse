@@ -3,21 +3,38 @@ package forms;
 public class Animation {
 
 	private Form form;
-	private Point center;
+	private Rotate r;
 
-	public Animation(Form f, Point center) {
+	public Animation(Form f) {
 		this.form = f;
-		this.center = center;
+	}
+
+	public void setAnimation(Rotate r) {
+		this.r = r;
 	}
 
 	public void animate() {
 		for (int i = 0; i < 20; i++) {
-        	form.rotate(center, -6);
+			r.animate();
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException ex) {
             	System.err.println(ex.getStackTrace());
             }
         }
+	}
+
+	public class Rotate {
+		private Point center;
+		private double alpha;
+
+		public Rotate(Point center, double alpha) {
+			this.center = center;
+			this.alpha = alpha;
+		}
+
+		public void animate() {
+			Animation.this.form.rotate(center, alpha);
+		}
 	}
 }

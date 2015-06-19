@@ -1,5 +1,6 @@
 package forms;
 
+import forms.Animation.Rotate;
 import teaching.WhiteBoard;
 
 public class Clock {
@@ -31,8 +32,13 @@ public class Clock {
 		Line pointer2 = new Line(center, new Point(300, 320));
 		pointer2.draw(wb);
 
-		Animation a = new Animation(pointer, center);
-		Animation a2 = new Animation(pointer2, center);
+		Animation a = new Animation(pointer);
+		Rotate r = a.new Rotate(center, -6);
+		a.setAnimation(r);
+
+		Animation a2 = new Animation(pointer2);
+		Rotate r2 = a2.new Rotate(center, -1);
+		a2.setAnimation(r2);
 
 		new ThreadedAnimation(a).start();
 		new ThreadedAnimation(a2).start();
