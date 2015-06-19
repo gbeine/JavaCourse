@@ -33,13 +33,12 @@ public class Point
         return this.y;
     }
 
-    public void move(int x, int y)
+    public Point move(int x, int y)
     {
-        this.x += x;
-        this.y += y;
+        return new Point(this.x + x, this.y + y);
     }
 
-    public void rotate(Point center, double alpha)
+    public Point rotate(Point center, double alpha)
     {
         double xv = this.x - center.getX();
         double yv = this.y - center.getY();
@@ -50,7 +49,9 @@ public class Point
         double ty = xv * Math.sin(radian) +
                     yv * Math.cos(radian);
 
-        this.x = (int)tx + center.getX();
-        this.y = (int)ty + center.getY();
+        xv = tx + center.getX();
+        yv = ty + center.getY();
+
+        return new Point((int)xv, (int)yv);
     }
 }

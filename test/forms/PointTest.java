@@ -34,18 +34,18 @@ public class PointTest
     public void move()
     {
         Point p = new Point(1,1);
-        p.move(2,2);
-        assertEquals(3, p.getX());
-        assertEquals(3, p.getY());
+        Point n = p.move(2,2);
+        assertEquals(3, n.getX());
+        assertEquals(3, n.getY());
     }
 
     @Test
-    public void ratate()
+    public void rotate()
     {
         Point p = new Point(100,0);
         Point c = new Point();
-        p.rotate(c, 90);
-        assertEquals(0, p.getX());
-        assertEquals(100, p.getY());
+        Point n = p.rotate(c, 90);
+        assertEquals(0, n.getX());
+        assertEquals(100, n.getY());
     }
 }
