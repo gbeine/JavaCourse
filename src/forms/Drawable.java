@@ -11,6 +11,14 @@ public abstract class Drawable
 
     protected abstract void drawForm();
 
+    protected void refresh()
+    {
+        if (this.wb != null) {
+            this.wb.wipeShape(shape);
+            drawForm();
+        }
+    }
+
     public void remove()
     {
         if (this.wb != null) {

@@ -41,12 +41,14 @@ public class Line extends Drawable implements Form
     {
     	this.p1 = this.p1.move(x, y);
     	this.p2 = this.p2.move(x, y);
+    	this.refresh();
     }
 
-    public void rotate(Point center, double alpha)
+	public void rotate(Point center, double alpha)
     {
     	this.p1 = this.p1.rotate(center, alpha);
     	this.p2 = this.p2.rotate(center, alpha);
+    	this.refresh();
     }
 
     protected void drawForm()
