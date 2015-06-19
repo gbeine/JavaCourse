@@ -1,3 +1,5 @@
+package forms;
+
 
 import teaching.WhiteBoard;
 
@@ -17,22 +19,22 @@ public class Circle extends Drawable implements Form
         this.center = center;
         this.radius = radius;
     }
-    
+
     public int getRadius()
     {
         return this.radius;
     }
-    
+
     public Point getCenter()
     {
         return this.center;
     }
-    
+
     public void move(int x, int y)
     {
         this.center.move(x, y);
     }
-    
+
     public void rotate(Point center, double alpha)
     {
         this.center.rotate(center, alpha);

@@ -1,3 +1,5 @@
+package forms;
+
 
 /**
  * A single Point.
@@ -14,29 +16,29 @@ public class Point
     {
         this(0, 0);
     }
-    
+
     public Point(int x, int y)
     {
         this.x = x;
         this.y = y;
     }
-    
+
     public int getX()
     {
         return this.x;
     }
-    
+
     public int getY()
     {
         return this.y;
     }
-    
+
     public void move(int x, int y)
     {
         this.x += x;
         this.y += y;
     }
-    
+
     public void rotate(Point center, double alpha)
     {
         double xv = this.x - center.getX();

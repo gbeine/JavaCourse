@@ -1,3 +1,5 @@
+package forms;
+
 
 import teaching.WhiteBoard;
 
@@ -8,7 +10,7 @@ public class Line extends Drawable implements Form
 {
     private Point p1;
     private Point p2;
-    
+
     /**
      * Constructor for creating Line objects.
      */
@@ -17,7 +19,7 @@ public class Line extends Drawable implements Form
         this.p1 = p1;
         this.p2 = p2;
     }
-    
+
     public int getX(int p)
     {
         if (p == 1) {
@@ -25,7 +27,7 @@ public class Line extends Drawable implements Form
         } else {
             return this.p2.getX();
         }
-    }    
+    }
 
     public int getY(int p)
     {
@@ -35,13 +37,13 @@ public class Line extends Drawable implements Form
             return this.p2.getY();
         }
     }
-    
+
     public void move(int x, int y)
     {
         this.p1.move(x, y);
         this.p2.move(x, y);
     }
-    
+
     public void rotate(Point center, double alpha)
     {
         this.p1.rotate(center, alpha);

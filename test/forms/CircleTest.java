@@ -1,3 +1,5 @@
+package forms;
+
 
 
 import static org.junit.Assert.*;
@@ -17,7 +19,7 @@ public class CircleTest
         assertEquals(1, c.getCenter().getX());
         assertEquals(2, c.getCenter().getY());
     }
-    
+
     @Test
     public void move()
     {
