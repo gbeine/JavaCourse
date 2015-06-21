@@ -45,4 +45,21 @@ public class PolygoneTest
         assertEquals(300.0, p.getPoint(4).getX(), 0.0000001);
         assertEquals(400.0, p.getPoint(4).getY(), 0.0000001);
     }
+
+    @Test
+    public void rotate() {
+        Point p1 = new Point(0,0);
+        Point p2 = new Point(4,0);
+        Point p3 = new Point(4,2);
+        Point p4 = new Point(0,2);
+
+        Polygone p = new Polygone(new Point[]{p1, p2, p3, p4});
+        p.rotate(new Point(2,1), 90);
+
+        assertEquals(3.0, p.getPoint(0).getX(), 0.0000001);
+        assertEquals(-1.0, p.getPoint(0).getY(), 0.0000001);
+        assertEquals(3.0, p.getPoint(1).getX(), 0.0000001);
+        assertEquals(3.0, p.getPoint(1).getY(), 0.0000001);
+
+    }
 }

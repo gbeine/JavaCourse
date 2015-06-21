@@ -10,8 +10,15 @@ public class Polygone extends Drawable implements Form {
 
 	@Override
 	protected void drawForm() {
-		// TODO Auto-generated method stub
+        double[] x = new double[this.points.length];
+        double[] y = new double[this.points.length];
 
+        for (int i = 0; i < this.points.length; i++) {
+                x[i] = this.points[i].getX();
+                y[i] = this.points[i].getY();
+        }
+
+        this.shape = this.wb.drawPolygon(x, y);
 	}
 
 	public int numberOfPoints() {
@@ -27,13 +34,13 @@ public class Polygone extends Drawable implements Form {
 		for (int i = 0; i < this.points.length; i++) {
 			this.points[i] = this.points[i].move(dx, dy);
 		}
-
 	}
 
 	@Override
 	public void rotate(Point center, double alpha) {
-		// TODO Auto-generated method stub
-
+		for (int i = 0; i < this.points.length; i++) {
+			this.points[i] = this.points[i].rotate(center, alpha);
+		}
 	}
 
 }
