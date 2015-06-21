@@ -9,6 +9,8 @@ public interface Form
 
     void rotate(Point center, double alpha);
 
+    void rotate(double alpha);
+
     void draw(WhiteBoard wb);
 
     void remove();

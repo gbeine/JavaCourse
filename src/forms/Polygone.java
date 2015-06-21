@@ -34,6 +34,7 @@ public class Polygone extends Drawable implements Form {
 		for (int i = 0; i < this.points.length; i++) {
 			this.points[i] = this.points[i].move(dx, dy);
 		}
+    	this.refresh();
 	}
 
 	@Override
@@ -41,6 +42,13 @@ public class Polygone extends Drawable implements Form {
 		for (int i = 0; i < this.points.length; i++) {
 			this.points[i] = this.points[i].rotate(center, alpha);
 		}
+    	this.refresh();
+	}
+
+	@Override
+	public void rotate(double alpha) {
+		this.rotate(this.getCenter(), alpha);
+    	this.refresh();
 	}
 
 	@Override

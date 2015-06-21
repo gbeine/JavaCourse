@@ -31,11 +31,17 @@ public class Circle extends Drawable implements Form
     public void move(int x, int y)
     {
     	this.center = this.center.move(x, y);
+    	this.refresh();
     }
 
     public void rotate(Point center, double alpha)
     {
     	this.center = this.center.rotate(center, alpha);
+    	this.refresh();
+    }
+
+    public void rotate(double alpha) {
+    	// nothing to do here
     }
 
     protected void drawForm()
