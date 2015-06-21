@@ -413,3 +413,16 @@ Interface Sprite herleiten und erstellen
 - Listener-Konzept erklären
 - Raumschiff als Sprite zum Cockpit hinzufügen
 - Raumschiff Events verarbeiten lassen
+
+### Raumschiff fliegen lassen
+
+- Raumschiff um Methode fly ergänzen, berechnet Vektor aus Geschwindigkeit und Richtung und bewegt die Figur
+- Endlos-Schleife im Spiel implementieren, um das Raumschiff zu bewegen
+
+### Asteroiden Factory
+
+- Factory Pattern erklären
+- Zunächst triviale Factory erstellen
+- Nächster Schritt ist, Asteroiden an zufälligen Positionen erscheinen zu lassen
+- Echte Fabrik erzeugen, Abhängigkeit zum WhiteBoard eliminieren (sollte Fabrik nicht haben)
+- Asteroiden als Animation erstellen und fliegen lassen

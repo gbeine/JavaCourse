@@ -47,3 +47,24 @@
 - Was sind innere Klassen?
 - Wie funktioniert das Command Pattern?
 - Wie funktioniert das Singleton Pattern?
+
+## Agenda Tag 3
+
+- Arrays
+- Factory Pattern
+- Polymorphismus
+- Events & Listener
+- Fingerübungen zu Tests und Refactorings
+- Recherchen in der API Dokumentation zu Klassen und Funktionen
+
+### Lernziele
+
+- Was sind Arrays?
+- Wie betrachtet Java Arrays?
+- Was sind die Unterschiede zwischen Arrays und Collections?
+- Wie leitet man ein Interface her?
+- Was ist das Factory Pattern?
+- Wie implementiert man eine Factory?
+- Was ist ein Event?
+- Was ist ein Listener?
+- Wie funktioniert das Event-Listener-Prinzip?
