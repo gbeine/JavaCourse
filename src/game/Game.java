@@ -15,13 +15,14 @@ public class Game {
 		cockpit.addDirectionListener(ship);
 		cockpit.addSpeedListener(ship);
 
+		AsteroidFactory.createAsteroids(wb);
+
 		while (true) {
 			ship.fly();
 			try {
 				Thread.sleep(1000 / SpaceShip.FRAMERATE);
 			} catch (InterruptedException e) {
 			}
-
 		}
 	}
 
