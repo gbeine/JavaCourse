@@ -34,4 +34,16 @@ public class LineTest
         assertEquals(4, l.getX(2), 0.0000001);
         assertEquals(8, l.getY(2), 0.0000001);
     }
+
+    @Test
+    public void center() {
+    	Point p1 = new Point(-3, -3);
+    	Point p2 = new Point(3, 3);
+        Line l = new Line(p1, p2);
+        Point p = l.getCenter();
+
+        assertEquals(0.0, p.getX(), 0.0000001);
+        assertEquals(0.0, p.getY(), 0.0000001);
+
+    }
 }

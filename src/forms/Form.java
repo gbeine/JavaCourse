@@ -12,4 +12,6 @@ public interface Form
     void draw(WhiteBoard wb);
 
     void remove();
+
+    Point getCenter();
 }

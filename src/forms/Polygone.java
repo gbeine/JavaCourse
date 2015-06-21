@@ -43,4 +43,16 @@ public class Polygone extends Drawable implements Form {
 		}
 	}
 
+	@Override
+	public Point getCenter() {
+		double x = 0, y = 0;
+		for (int i = 0; i < this.points.length; i++) {
+			x += this.points[i].getX();
+			y += this.points[i].getY();
+		}
+		x /= this.points.length;
+		y /= this.points.length;
+
+        return new Point(x, y);
+ 	}
 }

@@ -55,4 +55,11 @@ public class Line extends Drawable implements Form
     {
         this.shape = wb.drawLine(p1.getX(), p1.getY(), p2.getX(), p2.getY());
     }
+
+	@Override
+	public Point getCenter() {
+        double x = (this.p1.getX() + this.p2.getX())/2;
+        double y = (this.p1.getY() + this.p2.getY())/2;
+        return new Point(x, y);
+ 	}
 }
