@@ -1,7 +1,10 @@
 package game;
 
-import teaching.WhiteBoard;
+import java.util.HashSet;
+import java.util.Set;
+
 import forms.Circle;
+import forms.Form;
 import forms.Point;
 
 public class AsteroidFactory {
@@ -18,7 +21,9 @@ public class AsteroidFactory {
     private static final int Y_FACTOR = 50;
     private static final int Y_POSITION = 500;
 
-	public static void createAsteroids(WhiteBoard wb) {
+	public static Set<Form> createAsteroids() {
+
+		Set<Form> asteroids = new HashSet<>();
 
 		for (int i = 0; i < COUNT; i++) {
             int radius = RADIUS_MINIMUM + (int) (Math.random() * RADIUS_FACTOR);
@@ -28,8 +33,10 @@ public class AsteroidFactory {
 			Point center = new Point(x, y);
 
 			Circle asteroid = new Circle(center, radius);
-			asteroid.draw(wb);
+			asteroids.add(asteroid);
 		}
 
+		return asteroids;
 	}
+
 }
