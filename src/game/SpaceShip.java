@@ -9,6 +9,7 @@ import forms.Triangle;
 
 public class SpaceShip implements Sprite {
 
+	public static final int FRAMERATE = 24;
 	private final WhiteBoard wb;
 	private Figure spaceShip;
 	private int direction;
@@ -46,5 +47,11 @@ public class SpaceShip implements Sprite {
 	@Override
 	public void setSpeed(int speed) {
         this.speed = speed;
+	}
+
+	public void fly() {
+        int dx = (int) ( Math.sin(Math.toRadians(this.direction)) * this.speed/FRAMERATE );
+        int dy = (int) ( Math.cos(Math.toRadians(this.direction)) * this.speed/FRAMERATE );
+        this.spaceShip.move(dx, dy);
 	}
 }
