@@ -12,6 +12,8 @@ public class Game {
         Cockpit cockpit = createCockpit();
 		WhiteBoard wb = new WhiteBoard();
 		SpaceShip ship = new SpaceShip(wb);
+		cockpit.addDirectionListener(ship);
+		cockpit.addSpeedListener(ship);
 	}
 
 	private static Cockpit createCockpit() {

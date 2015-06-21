@@ -11,6 +11,8 @@ public class SpaceShip implements Sprite {
 
 	private final WhiteBoard wb;
 	private Figure spaceShip;
+	private int direction;
+	private int speed;
 
 	public SpaceShip(WhiteBoard wb) {
 		this.wb = wb;
@@ -35,13 +37,14 @@ public class SpaceShip implements Sprite {
 
 	@Override
 	public void setDirection(int direction) {
-		// TODO Auto-generated method stub
-
+        int alpha = this.direction - direction;
+        Point center = spaceShip.getCenter();
+        spaceShip.rotate(center, alpha);
+        this.direction = direction;
 	}
 
 	@Override
 	public void setSpeed(int speed) {
-		// TODO Auto-generated method stub
-
+        this.speed = speed;
 	}
 }
