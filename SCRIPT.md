@@ -325,3 +325,91 @@ Lösung ist klar, allerdings laufen die Animationen nur nacheinander
 - Konstruktor private machen
 - Instance als static final einführen -> static und final bei Variablen erklären
 - Aufrufe von Konstruktor durch INSTANCE ersetzen
+
+## Aufgabe 7 (optional)
+
+Für Leute, die ganz schnell fertig sind:
+Die Uhr soll die aktuelle Systemzeit darstellen.
+
+### Composite
+
+- Aktuell führt jedes Kommando genau eine Operation aus
+- Manchmal will man zwei Operationen in einem Animationsschritt darstellen
+
+## Aufgabe 8
+
+Erstellen einer Klasse, die Rotation und Bewegung in einem Animationsschritt erlaubt.
+
+### Arbeit mit Arrays
+
+- Arrays sind besondere Objekte
+- Können sowohl von Klassen als auch von primitiven Typen erstellt werden
+- Klasse Polygon einführen (Drawable, Form)
+- Tests implementieren mit anonymem Array, Methode NumberOfPoints zur Längenabfrage Array.length einführen
+- Methode move implementieren, for-Schleife über das Array, erklären: warum nicht foreach
+
+## Aufgabe 9
+
+Polygon rotieren und zeichnen.
+Inklusive Test.
+Methode zum Zeichnen von Polygonen ist
+
+    Object shape = WhiteBoard.draw(int[] x, int[] y);
+
+### Dreieck
+
+- Einführen Klasse Dreieck, Spezialfall von Polygon
+- Konstruktor von Polygon muss überschrieben werden, weil kein Standardkonstruktor vorhanden ist
+
+## Aufgabe 10
+
+Klasse Rechteck erstellen, Berechnung aus zwei Punkten
+
+## Aufgabe 11 (optional)
+
+Für die fixen: Rechteck aus Punkt, Länge der Diagonalen und Winkel der Diagonalen erstellen
+
+### Rotieren um sich selbst
+
+- Im Interface Form Methode getCenter ergänzen
+- Fehler in Linie und Polygon - Kreis hat die ja schon
+- In beiden Klassen via Rechtsklick auf Zeilennummer -> Add unimplemented Methods neue Methode ergänzen und implementieren
+- Polymorphismus erklären
+- Zweite Rotieren Methode nur mit Winkel - bedient sich  der Mittelpunktberechnung und der existierenden Rotate Methode
+- Im Kreis gibt es nichts zu tun
+
+Achtung: Mathematisch ist das beim Polygon nicht der Mittelpunkt, aber die echte Mittelpunktberechnung ist zu kompliziert. Für unsere Zwecke reicht das Beispiel.
+
+## Aufgabe 12
+
+Aus der Figure eine Form machen. Es gibt keinen Grund, warum die Figure keine Form sein sollte. Aber es gibt einige Fehler, in die man laufen kann.
+- Die Figure benötigt keinen Refresh nach Rotation oder Move
+- Rotate um den eigenen Mittelpunkt kann nicht einfach delegiert werden
+- Die Figure muss ihren Mittelpunkt aus den Mittelpunkten ihrer Bestandteile berechnen
+
+### Neues Package und Raumschiff zeichnen
+
+- Neues Package game erstellen
+- Klasse mit Main Methode erstellen
+- WhiteBoard initialisieren
+- Raumschiff zeichnen
+
+### GUI zur Bedienung integrieren
+
+- Klasse Cockpit verteilen und in main-Methode integrieren
+- Cockpit und WhiteBoard sollten beim Start des Spiels erscheinen
+- Methoden zur Rotation und Geschwindigkeit aus dem Cockpit erklären
+
+## Aufgabe 13 Interface Sprite herleiten
+
+Interface Sprite herleiten und erstellen
+
+### Raumschiff zum Sprite refactoren
+
+- Klasse Raumschiff (als Sprite) mit Initialisierung bauen (Refactoring aus der Main-Methode)
+
+### Cockpit mit Raumschiff verbinden
+
+- Listener-Konzept erklären
+- Raumschiff als Sprite zum Cockpit hinzufügen
+- Raumschiff Events verarbeiten lassen
